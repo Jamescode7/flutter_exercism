@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_exercism/appbar_bottom_navi_screen.dart';
 import 'package:flutter_exercism/base64_encoding_screen.dart';
 import 'package:flutter_exercism/secure_storage_screen.dart';
 
@@ -29,6 +30,14 @@ class Home extends StatelessWidget {
               );
             },
             child: Text('secure_storage'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => AppBarBottomNaviScreen(),)
+              );
+            },
+            child: Text('Appbar & BotoomNavi'),
           )
         ],
       )),
