@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_exercism/appbar_bottom_navi_screen.dart';
-import 'package:flutter_exercism/base64_encoding_screen.dart';
-import 'package:flutter_exercism/secure_storage_screen.dart';
+import 'package:flutter_exercism/model/use_enum.dart';
+import 'package:flutter_exercism/view/appbar_bottom_navi_screen.dart';
+import 'package:flutter_exercism/model/base64_encoding_screen.dart';
+import 'package:flutter_exercism/model/secure_storage_screen.dart';
+import 'package:flutter_exercism/view/clip_r_rect_screen.dart';
+import 'package:flutter_exercism/view/use_future_builder.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -38,7 +41,31 @@ class Home extends StatelessWidget {
               );
             },
             child: Text('Appbar & BotoomNavi'),
-          )
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => ClipRRectScreen(),)
+              );
+            },
+            child: Text('clipRRect Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => UseFutureBuilder(),)
+              );
+            },
+            child: Text('Use Future Builder'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => UseEnum(),)
+              );
+            },
+            child: Text('Use enum'),
+          ),
         ],
       )),
     );
